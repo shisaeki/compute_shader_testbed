@@ -1,0 +1,12 @@
+#pragma kernel KernelA;
+
+RWStructuredBuffer<int>	_buffer;
+int						_value;              
+
+[numthreads(4,1,1)]
+void KernelA (
+				uint3 group_id : SV_GroupID,
+				uint3 group_thread_id : SV_DispatchThreadID)
+{
+	_buffer[group_thread_id.x] = group_thread_id.x * _value;
+}
