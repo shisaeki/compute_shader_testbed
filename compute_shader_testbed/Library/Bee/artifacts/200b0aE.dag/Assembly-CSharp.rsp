@@ -350,6 +350,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/compute_shader_testbed/compute_array/scripts/sample_array.cs"
 "Assets/compute_shader_testbed/compute_array/scripts/sample_array_reboot.cs"
+"Assets/compute_shader_testbed/simple_texture/scripts/simple_texture.cs"
 -langversion:9.0
 
 /deterministic

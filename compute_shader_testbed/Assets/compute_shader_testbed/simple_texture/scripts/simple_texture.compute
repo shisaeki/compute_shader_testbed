@@ -1,0 +1,14 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel Kernel_Simple_Texture
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> _texture;
+int                 _width;
+int                 _height;
+
+[numthreads(8, 8, 1)]
+void Kernel_Simple_Texture (uint3 id : SV_DispatchThreadID)
+{
+    _texture[id.xy] = float4(id.x / _width, id.x / _width, id.x / _width, 1);
+}
